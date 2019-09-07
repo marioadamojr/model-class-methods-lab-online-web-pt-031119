@@ -10,9 +10,7 @@ class Boat < ActiveRecord::Base
 
   def self.dinghy
     # where("length < 20")
-    Boat.find_each do |boat|
-      boat.length < 20
-    end
+    Boat.where(length < 20)
   end
 
   def self.ship

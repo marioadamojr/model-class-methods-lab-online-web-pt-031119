@@ -10,7 +10,7 @@ class Boat < ActiveRecord::Base
 
   def self.dinghy
     # where("length < 20")
-    Boat.where(selflength < 20)
+    Boat.where(self.length < 20)
   end
 
   def self.ship
